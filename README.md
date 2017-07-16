@@ -1,4 +1,6 @@
-# second-sale
+# userInfo
+
+使用``npm install``安装依赖
 
 使用``npm start``启动服务
 
