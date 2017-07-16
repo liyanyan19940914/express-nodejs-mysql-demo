@@ -9,14 +9,14 @@ let connection = mysql.createConnection({
 });
 connection.connect();
 
-const insertUser = 'insert user (id,name,sex,age,tel,mail,note)values(?,?,?,?,?,?,?)';
-const insertUserParams = [null,"张三","woman",18,"12345678945","9877743381@qq.com","fsg"];
-connection.query(insertUser,insertUserParams,function(err,result){
+const deleteId = 'delete from user where id="1"';
+
+connection.query(deleteId,function(err,result){
     if(err){
         console.log('insert err :',err.message);
         return;
     }
-    console.log('insert id:',result);
+    console.log('delete success:',result.rowsAffected);
 });
 
 connection.end();
